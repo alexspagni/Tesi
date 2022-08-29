@@ -1,0 +1,106 @@
+\begin{thebibliography}{10}
+
+\bibitem{ReactNativeCLI:Expo}
+fulcrum.
+\newblock React native cli vs expo.
+\newblock
+  \url{https://fulcrum.rocks/blog/react-native-init-vs-expo#:~:text=to%20get%20started.-,What%20is%20Expo,testing%20of%20React%20Native%20app},
+  2022.
+
+\bibitem{app:ibride:native}
+Corael srl.
+\newblock Differenza tra app nativa e app ibrida.
+\newblock
+  \url{https://corael.it/qual-e-la-differenza-tra-app-nativa-e-app-ibrida/?gclid=Cj0KCQjwgO2XBhCaARIsANrW2X2GyVHY_r_m3okI4e8Kdy-KShS7Ftj0sZf30GWkEAD5f4R7_KFGfL4aAlIiEALw_wcB},
+  2021.
+
+\bibitem{ReactNative}
+Bonnie Eisenman.
+\newblock {\em Learning React Native}, chapter Working with React Native.
+\newblock O'Reilly Media, 2016.
+
+\bibitem{ReactNative:Sito}
+Meta.
+\newblock React native documentation.
+\newblock \url{https://reactnative.dev/docs/native-modules-intro}, 2022.
+
+\bibitem{ReactNavigation}
+Expo, Software Mansion, and Callstack.
+\newblock React navigation documentation.
+\newblock \url{https://reactnavigation.org/docs/getting-started/},
+  \url{https://reactnavigation.org/docs/stack-navigator}, 2022.
+
+\bibitem{Redux}
+Dan Abramov and the Redux~documentation authors.
+\newblock Redux and react redux documentation.
+\newblock \url{https://redux.js.org/introduction/getting-started},
+  \url{https://redux.js.org/understanding/thinking-in-redux/three-principles},
+  \url{https://redux.js.org/understanding/thinking-in-redux/motivation},
+  \url{https://react-redux.js.org/introduction/getting-started}, 2022.
+
+\bibitem{KotlinTech}
+Giuneco S.r.l.
+\newblock Applicazioni native android e ios.
+\newblock
+  \url{https://tech.giuneco.it/applicazioni-native-android-e-ios-parte-1/},
+  2021.
+
+\bibitem{Kotlin:JetBrains}
+Jet Brains.
+\newblock Kotlin documentation.
+\newblock \url{https://kotlinlang.org/docs/android-overview.html}, 2022.
+
+\bibitem{KotlinInfoWorld}
+Martin Heller.
+\newblock What is kotlin? the java alternative explained, 2020.
+\newblock
+  \url{https://www.infoworld.com/article/3224868/what-is-kotlin-the-java-alternative-explained.html#:~:text=Kotlin%20is%20a%20general%20purpose,%2C%20clarity%2C%20and%20tooling%20support}.
+
+\bibitem{kotlin}
+Dawn griffiths.
+\newblock {\em Head First Kotlin}, chapter A quik Dip.
+\newblock O'Reilly Media, 2019.
+
+\bibitem{KotlinBaeldung}
+Anshul Bansal.
+\newblock Java vs. kotlin.
+\newblock
+  \url{https://www.baeldung.com/kotlin/java-vs-kotlin#:~:text=Java%20is%20a%20strictly%20typed,type%20of%20the%20assignment%20value},
+  2021.
+
+\bibitem{Apple:Com}
+Apple.
+\newblock Swift overview.
+\newblock \url{https://developer.apple.com/swift/#open-source}, 2022.
+
+\bibitem{Apple:Swift}
+Apple.
+\newblock Swift about.
+\newblock \url{https://www.swift.org/about/}, 2022.
+
+\bibitem{GarbageCollector}
+Massimo Carli.
+\newblock Il garbage collector di java.
+\newblock
+  \url{http://www.di-srv.unisa.it/~ads/corso-security/www/CORSO-9900/java/mirror/mokabyte/garbagecollector.htm},
+  1998.
+
+\bibitem{Swift:ObjectC}
+Code Academy.
+\newblock Kotlin vs swift.
+\newblock \url{https://www.codecademy.com/resources/blog/kotlin-vs-swift/},
+  2021.
+
+\bibitem{Swift:Kotlin}
+Lerma Gray.
+\newblock Kotlin vs swift.
+\newblock \url{https://devcount.com/kotlin-vs-swift/}, 2022.
+
+\bibitem{NativeApp:MultiplatformApp}
+Satinder Singh.
+\newblock Natie app e multiplatform app.
+\newblock
+  \url{https://www.netguru.com/blog/cross-platform-vs-native-app-development},
+  2021.
+
+\end{thebibliography}
