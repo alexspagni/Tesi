@@ -103,4 +103,45 @@ Satinder Singh.
   \url{https://www.netguru.com/blog/cross-platform-vs-native-app-development},
   2021.
 
+\bibitem{ReactNavigationContainer}
+Expo, Software Mansion, and Callstack.
+\newblock React navigation documentation.
+\newblock \url{https://reactnavigation.org/docs/navigation-container/}, 2022.
+
+\bibitem{ReactNavigationStackNavigator}
+Expo, Software Mansion, and Callstack.
+\newblock React navigation documrntation.
+\newblock
+  \url{https://reactnavigation.org/docs/stack-navigator#api-definition}, 2022.
+
+\bibitem{ReduxSite}
+Expo, Software Mansion, and Callstack.
+\newblock Getting started.
+\newblock
+  \url{https://www.knowledgehut.com/blog/web-development/redux-in-react-native},
+  2022.
+
+\bibitem{Axios}
+John Jakob.
+\newblock Getting started.
+\newblock \url{https://axios-http.com/docs/intro}, 2022.
+
+\bibitem{Promise}
+Mozilla.
+\newblock promise.
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise},
+  2022.
+
+\bibitem{FlatList}
+React Native.
+\newblock Flatlist.
+\newblock \url{https://reactnative.dev/docs/flatlist#listemptycomponent}, 2022.
+
+\bibitem{ReactNativeComponent}
+React~Native Component.
+\newblock Component rendering.
+\newblock \url{https://reactnative.dev/docs/intro-react-native-components},
+  2022.
+
 \end{thebibliography}
