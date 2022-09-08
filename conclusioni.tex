@@ -3,3 +3,53 @@
 \addcontentsline{toc}{chapter}{Conclusioni} % this line enable the introduction to be listed in the Table Of Contents even if it's not a numbered chapter (see above)
 \markboth{}{}
 
+In questo capitolo verranno discussi gli obiettivi, i risultati e le conoscenze acquisite al termine del tirocinio ed eventuali sviluppi futuri dell'applicazione.
+
+\section{Obiettivi e Risultati Raggiunti}
+Gli obiettivi principali di questo progetto di tirocinio sono stati:
+\begin{enumerate}
+    \item Lo sviluppo di un'applicazione multipiattaforma, quindi di un applicativo che possa funzionare su diversi sistemi operativi.
+    \item L'uso del protocollo HTTP per la comunicazione con i server della Nasa.
+    \item L'utilizzo del formato JSON per la trasmissione e l'estrapolazione di dati.
+    \item La gestione della navigazione tra i vari screen dell'applicazione.
+    \item La comprensione e l'utilizzo dell'architettura modulare.
+\end{enumerate}
+
+Tutti questi obiettivi non solo sono stati raggiunti con successo, ma \`e stato aggiunto anche uno strato di autenticazione e registrazione che non era richiesto dal progetto.
+Come si pu\`o dedurre dal capitolo ``RISULTATI", il primo obiettivo \`e stato raggiunto in pieno: l'applicazione svolge le stesse funzioni sia su Android che iOS. Nonostante ci\`o, essendo stato
+utilizzato lo stesso codice per entrambe le piattaforme, vi saranno sempre delle differenze per quanto riguarda gli aspetti grafici. L'applicazione non presenta
+cali di performance, il che dimostra che lo sviluppo di applicazioni multipiattaforma \`e una valida alternativa allo sviluppo nativo.
+Si sottolinea che questo applicativo non fa uso di funzioni native del dispositivo come GPS e notifiche Push.
+
+Sia il secondo che il terzo obiettivo sono stati raggiunti con successo: dal capitolo ``IMPLEMENTAZIONE" si pu\`o infatti osservare che ad ogni ricerca vengono caricate delle nuove immagini, e questo \`e il risultato
+di diverse richieste HTTP. Inoltre l'uso del formato JSON per la trasmissione dei dati \`e stato cruciale: in effetti le immagini restituite dai server della Nasa sono proprio in questo formato. Tramite JSON \`e stato possibile comunicare facilmente al server locale
+le credenziali inserite da ogni utente e in seguito estrarre il JWT dalle risposte ottenute.
+
+Durante l'utilizzo dell'applicazione, la navigazione tra i vari screen che la compongono risulta essere fluida e garantisce una buona UX. Nonostante ci\`o,
+essendo l'applicazione multipiattaforma, la navigazione pu\`o essere diversa tra i vari sistemi operativi a causa delle funzioni navigazione nativa di ogni dispositivo.
+
+Oltre a poter testare l'applicazione in locale ne \`e stata fatta anche la build in modo da poterla distribuire sugli store in un futuro, a seguito di ulteriori migliorie.
+La build \`e stata caricata sul sito di Expo ed \`e possibile scaricarne l'apk.
+
+\section{Conoscenze Acquisite}
+Terminato il progetto si pu\`o dire di aver approfondito ed acqusisto competenze con nuovi strumenti e tecnologie, in particolare:
+\begin{itemize}
+    \item JavaScript: l'utilizzo di JavaScript al di fuori dello sviluppo web \`e stato particolarme utile per capire come utilizzare questo linguaggio sia per lo sviluppo
+          lato server, tramite Node.js, sia per lo sviluppo dell'intera applicazione tramite l'utilizzo del framework React Native.
+    \item Expo: il suo utilizzo ha permesso di iniziare lo sviluppo dell'applicazione fin da subito e lasciare la gestione di eventuali altre attivit\`a a servizi di terze parti. Questo strumento \`e
+          una perfetta scelta per l'introduzione allo sviluppo mobile.
+    \item Node.js: attraverso la realizzazione di questo applicativo \`e stato possibile approfondire l'utilizzo di JavaScript nello sviluppo lato server, e comprendere meglio l'importanza delle API.
+    \item Mongodb: questo database NoSQL \`e stata una scelta necessaria, in quanto il server locale e l'applicazione comunicano attraverso il formato JSON. Nonostante ci\`o, \`e stato molto interessante
+          e utile imparare la logica di comunicazione e memorizzazione di un database NoSQL.
+\end{itemize}
+
+\section{Sviluppi Futuri}
+Nonostante l'applicazione soddisfi tutti i requisiti di progetto, si potrebbe pensare di aggiungere altre funzionalit\`a come:
+\begin{itemize}
+    \item La possibilit\`a di ricercare le immagini in base alla camera utilizzata per scattare le foto.
+    \item La possibilit\`a di ricercare le immagini per data ``Marziana".
+\end{itemize}
+Un altro possibile miglioramento potrebbe consistere nel memorizzare le ultime immagini visualizzate dall'utente sul database, piuttosto che mantenerle in modo persistente sul dispositivo: in questo
+modo si risparmierebbe memoria.
+Per garantire una migliore UX si potrebbe creare una classifica delle immagini pi\`u visualizzate: in questo modo ogni utente potrebbe dare la propria opinione sulle diverse immagini. In base a questa
+classifica si potrebbe decidere di non mostrare le immagini meno popolari.

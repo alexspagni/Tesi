@@ -864,7 +864,6 @@ INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\spagn\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\ringraziamenti.tex
 INPUT .\ringraziamenti.tex
@@ -887,6 +886,7 @@ INPUT introduzione.tex
 INPUT .\introduzione.tex
 INPUT .\introduzione.tex
 INPUT introduzione.tex
+INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\statoarte.tex
 INPUT .\statoarte.tex
 INPUT .\statoarte.tex
@@ -896,6 +896,7 @@ INPUT .\statoarte.tex
 INPUT statoarte.tex
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT .\images\ReactNativeLogo-NoBackground.png
 INPUT .\images\ReactNativeLogo-NoBackground.png
@@ -905,7 +906,6 @@ INPUT .\images\ReactNativeLogo-NoBackground.png
 INPUT .\images\ReactNativeLogo-NoBackground.png
 INPUT .\images\ReactNativeLogo-NoBackground.png
 INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\spagn\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\images\ReactRendering.jpg
 INPUT .\images\ReactRendering.jpg
 INPUT images\ReactRendering.jpg

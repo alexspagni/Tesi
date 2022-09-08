@@ -44,7 +44,7 @@ Tramite l'utilizzo della libreria {}(\textit{React Navigation}) \`e possibile an
     \label{fig:Navigation code}
 \end{figure}
 
-nella figura 3.2, viene mostrato un frammento di codice \`e stato preso dal file App.tsx . Come si pu\`o vedere il NavigationContainer \`e il componente in cima alla gerarchia e va ad avvolgere i vari Stack Navigator:
+nella Fig 3.2, viene mostrato un frammento di codice \`e stato preso dal file App.tsx . Come si pu\`o vedere il NavigationContainer \`e il componente in cima alla gerarchia e va ad avvolgere i vari Stack Navigator:
 \begin{enumerate}
     \item Il primo \`e quello immediatamente successivo al NavigationContainer e viene utilizzato per gestire la transizione verso:
           \begin{list}{*}{}
@@ -81,13 +81,13 @@ Le \textit{action} devono avere una propriet\`a ``type" per indicare il tipo di 
     \end{minipage}
 \end{figure}
 
-Sia le \textit{action} che i \textit{reducer} vengono definiti come delle arrow function. La \textit{action} rappresentata nella fig 3.3 viene utilizzata per indicare che l'array contenente le immagini che devono essere visualizzate a schermo, deve essere aggiornato.
+Sia le \textit{action} che i \textit{reducer} vengono definiti come delle arrow function. La \textit{action} rappresentata nella Fig 3.3 viene utilizzata per indicare che l'array contenente le immagini che devono essere visualizzate a schermo, deve essere aggiornato.
 Un \textit{action} ritorna sempre un oggetto che contiene due propriet\`a ovvero type e payload: La prima viene utilizzata per indicare al \textit{reducer} quale azione deve essere eseguita, mentre la seconda rappresenta il contenuto con cui deve essere aggiornato lo stato all'interno dello store.
 
-Il \textit{reducer} rappresentato nella fig 3.4, riceve sempre due parametri, che sono state e action: il primo rappresenta lo stato memorizzato nello store e viene sempre passato da quest'ultimo ogni volta che il \textit{reducer} viene invocato; l'\textit{action} rappresenta l'azione che il \textit{reducer} deve eseguire.
+Il \textit{reducer} rappresentato nella Fig 3.4, riceve sempre due parametri, che sono state e action: il primo rappresenta lo stato memorizzato nello store e viene sempre passato da quest'ultimo ogni volta che il \textit{reducer} viene invocato; l'\textit{action} rappresenta l'azione che il \textit{reducer} deve eseguire.
 In base all'azione passata si entrer in uno dei diversi ``case" dello switch.
 
-Supponendo che venga eseguita l'\textit{action} mostrata nella fig 3.3, si entrerebbe nel primo ``case" dello switch e si andrebbe a sostituire lo stato attuale con il payload fornito dall'\textit{action}.
+Supponendo che venga eseguita l'\textit{action} mostrata nella Fig 3.3, si entrerebbe nel primo ``case" dello switch e si andrebbe a sostituire lo stato attuale con il payload fornito dall'\textit{action}.
 
 Le \textit{action} passate ad ogni reducer sono degli oggetti JavaScript inviati attraverso il metodo nativo di React, chiamato dispatch() che prende come parametro la \textit{action} stessa. Per poter invocare questo metodo 
 \`e necessario utilizzare un hook, chiamato ``useDispatch".
@@ -125,7 +125,7 @@ Per effettuare richieste HTTP \`e stato utilizzato Axios, un Client HTTP che rit
     \label{fig:getRequest}
 \end{figure}
 
-Per poter eseguire una GET request finalizzata al recupero delle immagini, come nella fig 3.7, \`e necessario fornire al metodo ``get" dell'Axios instance {}(creata nella fig 3.6) L'URL a cui deve deve essere effettuata la richiesta e i parametri per ricercare le immagini; in particolare questi ultimi sono:
+Per poter eseguire una GET request finalizzata al recupero delle immagini, come nella Fig 3.7, \`e necessario fornire al metodo ``get" dell'Axios instance {}(creata nella Fig 3.6) L'URL a cui deve deve essere effettuata la richiesta e i parametri per ricercare le immagini; in particolare questi ultimi sono:
 \begin{list}{*}{}
     \item Il nome del Rover {}(required)
     \item La data solare in cui sono state scattate le foto {}(required)
@@ -168,8 +168,8 @@ viene utilizzato un hook di React chiamato useEffect, al quale vengono assegnate
 che viene aggiornato ogni volta che un utente vuole effettuare una nuova ricerca di immagini; il secondo \`e uno state che viene aggiornato ogni volta che l'utente preme sul
 pulsante ``all", esprimendo in questo modo l'intenzione di voler eseguire una ricerca.
 
-Lo useEffect mostato nella fig 3.9 non viene eseguito solo quando l'utente apre l'applicazione per la prima volta, ma anche ogni volta che effettua una nuova ricerca di immagini.
-Tutte le volte che viene eseguito il frammento di codice nella fig 3.9 viene aggiornato lo state \textit{dataRover}, andando a modificare il numero di pagina da recuperare. Inoltre viene invocata una funzione chiamata ReplaceImageFromMarsList{}(),
+Lo useEffect mostato nella Fig 3.9 non viene eseguito solo quando l'utente apre l'applicazione per la prima volta, ma anche ogni volta che effettua una nuova ricerca di immagini.
+Tutte le volte che viene eseguito il frammento di codice nella Fig 3.9 viene aggiornato lo state \textit{dataRover}, andando a modificare il numero di pagina da recuperare. Inoltre viene invocata una funzione chiamata ReplaceImageFromMarsList{}(),
 la quale va a recuperare le nuove immagini da mostrare all'utente.
 \begin{figure}[h]
     \centering
@@ -178,7 +178,7 @@ la quale va a recuperare le nuove immagini da mostrare all'utente.
     \label{fig:useEffect}
 \end{figure}
 \subsection*{ReplaceImageFromMarsList()}
-Come si pu\`o vedere nella fig 3.10, questa funzione richiede che le vengono passati alcuni parametri:
+Come si pu\`o vedere nella Fig 3.10, questa funzione richiede che le vengono passati alcuni parametri:
 \begin{itemize}
     \item Il nome del Rover per cui deve essere eseguita la ricerca.
     \item La pagina che contentiene le immagini da recuperare: questa funzione viene eseguita ogni volta che l'utente vuole ricercare nuove immagini, quindi sar\`a necessario recuperare sempre la prima pagina.
@@ -203,7 +203,7 @@ Per poter ricercare delle immagini tramite il nome del Rover, viene fornita una 
 \begin{itemize}
     \item Viene modificato lo state che mantiene le informazioni sui parametri di ricerca forniti dall'utente, aggiornando quindi il campo RoverName.
     \item Viene posto a true lo state ``loading", in modo da mostrare un'animazione che informi l'utente dell'avvio della ricerca.
-    \item Viene modificato lo state ``search", in modo che venga eseguito lo useEffect mostrato in fig 3.9.
+    \item Viene modificato lo state ``search", in modo che venga eseguito lo useEffect mostrato in Fig 3.9.
 \end{itemize}
 \begin{figure}[h]
     \centering
@@ -213,7 +213,7 @@ Per poter ricercare delle immagini tramite il nome del Rover, viene fornita una 
 \end{figure}
 
 Per poter ricercare delle immagini in base alla data solare vengono forniti all'utente tre campi ``input text", nei quali deve inserire giorno, mese e anno in cui sono state scattate.
-Quando viene premuto il tasto ``Search by date" avviene un aggiornamento degli stati simile a quello della fig 3.11. L'unica differenza riguarda l'aggiornamento dello stato ``dataRover": invece di 
+Quando viene premuto il tasto ``Search by date" avviene un aggiornamento degli stati simile a quello della Fig 3.11. L'unica differenza riguarda l'aggiornamento dello stato ``dataRover": invece di 
 modificare il campo roverName vengono aggiornati i campi earth-day, earth-month, earth-year.
 
 \section{Immagini Persistenti}
@@ -228,10 +228,10 @@ Per ottenere questo risultato \`e stata usata una libreria, chiamata \textit{rea
     \label{fig:persistStore}
 \end{figure}
 
-Come si pu\`o osservare nella fig 3.12, react-redux richiede che vengano indicati quali stati dello store debbano essere mantenuti in modo persistente e quali no; in questo applicativo solo gli state ``images" e ``imagesHide" vengono mantenuti in questo modo.
+Come si pu\`o osservare nella Fig 3.12, react-redux richiede che vengano indicati quali stati dello store debbano essere mantenuti in modo persistente e quali no; in questo applicativo solo gli state ``images" e ``imagesHide" vengono mantenuti in questo modo.
 \`E necessario poi creare lo store utilizzando la configurazione persistConfig, fornita da react-redux.
 
-Per completare la configurazione dello store persistente si deve ``avvolgere" il NavigationContainer, che a sua volta ``avvolge" l'intera applicazione, come mostrato nella fig 3.8.
+Per completare la configurazione dello store persistente si deve ``avvolgere" il NavigationContainer, che a sua volta ``avvolge" l'intera applicazione, come mostrato nella Fig 3.8.
 \begin{figure}[h]
     \centering
     \includegraphics[width=10cm, height=4cm]{images/WrapNavigationConteiner.png}
@@ -243,7 +243,7 @@ Per completare la configurazione dello store persistente si deve ``avvolgere" il
 Una volta occultate, le immagini non vengono pi\`u visualizzate a meno che non sia l'utente a deciderlo. \`E stato realizzato un pulsante, chiamato ``Photos", che permette di ripristinare le immagini nascoste.
 
 Nella schermata principale si hanno diversi pulsanti con uno stile simile, tra cui ``Photos": ho deciso quindi di realizzare un ``Custom component" in modo da poterlo riutilizzare per tutti i pulsanti.
-Come si pu\`o osservare nella fig 3.14, a FilterButtonComponent {}(il ``Custom component") vengono passate cinque prop: tre per configurarne lo stile e due per configurarne il funzionamento.
+Come si pu\`o osservare nella Fig 3.14, a FilterButtonComponent {}(il ``Custom component") vengono passate cinque prop: tre per configurarne lo stile e due per configurarne il funzionamento.
 
 Ogni volta che il pulsante Photos viene premuto, il suo colore cambia da azzurro a grigio e viceversa: questo avviene grazie alla prop ``setColor". 
 Il cambio di colore indica una precisa azione del filtro:
@@ -273,7 +273,7 @@ contattata la route localhost3000/signin, mentre nella seconda viene contattata 
     \label{fig:sign in}
 \end{figure}
 
-Come si pu\`o notare nella fig 3.15 l'utente invia un oggetto contenente la propria e-mail e password utilizzato il metodo post della libreria Axios;
+Come si pu\`o notare nella Fig 3.15 l'utente invia un oggetto contenente la propria e-mail e password utilizzato il metodo post della libreria Axios;
 il quale invier\`a l'oggetto in formato JSON.
 
 Se la procedura di \textit{sign in} va andare a buon fine, il server risponde con il JWT dell'utente, il quale viene salvato all'interno dell'``asyncStorage"; cos\`i facendo quando l'utente riapre
@@ -284,7 +284,7 @@ La procedura di \textit{sign up} \`e identica tranne per la route che l'applicaz
 
 Vediamo ora nel dettaglio la route di \textit{sign in} e \textit{sign up} all'interno del server.
 \subsection*{Sign Up}
-Come si pu\`o vedere nella fig 3.16, la prima operazione svolta dalla route di \textit{sign up} consiste nell'andare ad estrarre le credenziali
+Come si pu\`o vedere nella Fig 3.16, la prima operazione svolta dalla route di \textit{sign up} consiste nell'andare ad estrarre le credenziali
 fornite dall'utente; una volta ottenute viene creato e poi salvato un nuovo ``user" all'interno del database tramite il metodo ``save".
 
 Se il salvataggio avviene correttamente, si genera un JWB che viene inserito nel body della risposta inviata dal server all'applicazione.
@@ -295,7 +295,7 @@ Se il salvataggio avviene correttamente, si genera un JWB che viene inserito nel
     \label{fig:sign up}
 \end{figure}
 
-Prima di effettuare il salvataggio dell'utente nel database viene eseguita una operazione di pre-saving come mostrato nella fig 3.17. In questa operazione viene cifrata la password fornita dall'utente.
+Prima di effettuare il salvataggio dell'utente nel database viene eseguita una operazione di pre-saving come mostrato nella Fig 3.17. In questa operazione viene cifrata la password fornita dall'utente.
 Per eseguire la cifratura vengono usati due metodi della libreria bcrypt; ossia genSalt e hash: in particolare, il secondo permette di eseguire l'hash
 della password. Quest'ultima viene poi sostituita a quella inserita dall'utente in modo che venga inserita nel database.
 
@@ -316,6 +316,6 @@ della password. Quest'ultima viene poi sostituita a quella inserita dall'utente 
     \label{fig:Route sign in}
 \end{figure}
 
-Come si pu\`o vedere nella fig 3.18, per prima cosa si accede alle credenziali inviate dall'utente e si controlla che siano state fornite sia un'email che una password. In seguito, attraverso l'email fornita, viene recuperata la password cifrata presente
+Come si pu\`o vedere nella Fig 3.18, per prima cosa si accede alle credenziali inviate dall'utente e si controlla che siano state fornite sia un'email che una password. In seguito, attraverso l'email fornita, viene recuperata la password cifrata presente
 nel database e tramite la funzione comparePassword() si confrontano le due password. Questa funzione fa uso dl metodo compare del modulo bcrypt per andare a verificare che la password fornita dall'utente e quella cifrata presente sul database siano uguali.
  Se la verifica da esito positivo, viene generato un JWT tramite il metodo sign del modulo ``jsonwebtoken". il token generato viene poi inserito nel body della riposta per l'utente.
