@@ -20,9 +20,9 @@ queste sono le cartelle e i file che vengono creati:
     \label{fig:ExpoCartelleFile}
 \end{figure}
 \section{Navigazione all'interno dell'Applicazione}
-Ogni applicazione \`e composta da diversi screen ed \`e necessario permettere all'utente di transitare tra di essi. Per svolgere questa operazione \`e stata usata la 
-libreria \textit{React Navigation}, la quale fornisce diversi componenti e funzioni per la gestione della navigazione all'interno dell'app. In particolare all'interno 
-dell'applicativo ho utilizzati \cite{ReactNavigationContainer}\cite{ReactNavigationStackNavigator}:
+Ogni applicazione \`e composta da diversi screen ed \`e necessario permettere all'utente di transitare tra di essi. Per svolgere questa operazione \`e stata usata la
+libreria \textit{React Navigation}, la quale fornisce diversi componenti e funzioni per la gestione della navigazione all'interno dell'app. In particolare all'interno
+dell'applicativo ho utilizzati \cite{ReactNavigationContainer} \cite{ReactNavigationStackNavigator}:
 \begin{itemize}
     \item NavigationContainer: \`e un componente responsabile della gestione dello stato dell'applicazione, del collegamento del top-level navigator all'ambiente dell'applicazione e dell'integrazione con la piattaforma specifica su cui verr\`a installata.
           Solitamente viene utilizzato una sola volta all'interno dell'applicativo e viene inserito nel file App.js/App.tsx. Lo scopo principale di questo componente \`e la gestione della navigazione tra i vari navigator che verranno inseriti all'interno dell'applicazione. Per poterlo utilizzare \`e necessario importarlo dalla libreria \textit{react-navigation}.
@@ -59,12 +59,12 @@ nella Fig 3.2, viene mostrato un frammento di codice \`e stato preso dal file Ap
 
 \section{Stati all'Interno dell'Applicazione}
 All'interno dell'applicazione vi sono diversi stati che vengono continuamente aggiornati; per tenere traccia di ognuno di essi sono stati utlizzati le librerie \textit{redux} e \textit{react-redux}.
-Attraverso di esse si va a creare uno \textit{store} che contiene l'intero stato dell'applicazione come un semplice oggetto JavaScript. 
+Attraverso di esse si va a creare uno \textit{store} che contiene l'intero stato dell'applicazione come un semplice oggetto JavaScript.
 
 Per poter modificare gli stati vengono utilizzate delle funzioni pure chiamate
 \textit{reducers} che specificano come cambia lo stato in risposta ad una \textit{action}. I \textit{reducers} prendono come argomento un'azione con un payload e restituiscono un nuovo stato basato sull'azione passata. Essendo funzioni pure non modificano i dati
 dell'oggetto che viene passato e non eseguono alcun effetto collaterale nell'applicazione; dato lo stesso stesso oggetto dovrebbero produrre sempre lo stesso risultato.
-Le \textit{action} devono avere una propriet\`a ``type" per indicare il tipo di azione da eseguire. Esse rappresentano l'unica fonte di informazioni per lo \textit{store}\cite{ReduxSite}.
+Le \textit{action} devono avere una propriet\`a ``type" per indicare il tipo di azione da eseguire. Esse rappresentano l'unica fonte di informazioni per lo \textit{store} \cite{ReduxSite}.
 %Le \textit{action} passate ad ogni reducer sono degli oggetti JavaScript inviati attraverso il metodo nativo di React, chiamato dispatch(). 
 
 \begin{figure}[h]
@@ -89,7 +89,7 @@ In base all'azione passata si entrer in uno dei diversi ``case" dello switch.
 
 Supponendo che venga eseguita l'\textit{action} mostrata nella Fig 3.3, si entrerebbe nel primo ``case" dello switch e si andrebbe a sostituire lo stato attuale con il payload fornito dall'\textit{action}.
 
-Le \textit{action} passate ad ogni reducer sono degli oggetti JavaScript inviati attraverso il metodo nativo di React, chiamato dispatch() che prende come parametro la \textit{action} stessa. Per poter invocare questo metodo 
+Le \textit{action} passate ad ogni reducer sono degli oggetti JavaScript inviati attraverso il metodo nativo di React, chiamato dispatch() che prende come parametro la \textit{action} stessa. Per poter invocare questo metodo
 \`e necessario utilizzare un hook, chiamato ``useDispatch".
 
 Oltre a poter memorizzare gli stati all'interno dello store \`e anche possibile accedere ai dati contenuti in essi attraverso un altro hook, chiamato ``useSelector".
@@ -213,7 +213,7 @@ Per poter ricercare delle immagini tramite il nome del Rover, viene fornita una 
 \end{figure}
 
 Per poter ricercare delle immagini in base alla data solare vengono forniti all'utente tre campi ``input text", nei quali deve inserire giorno, mese e anno in cui sono state scattate.
-Quando viene premuto il tasto ``Search by date" avviene un aggiornamento degli stati simile a quello della Fig 3.11. L'unica differenza riguarda l'aggiornamento dello stato ``dataRover": invece di 
+Quando viene premuto il tasto ``Search by date" avviene un aggiornamento degli stati simile a quello della Fig 3.11. L'unica differenza riguarda l'aggiornamento dello stato ``dataRover": invece di
 modificare il campo roverName vengono aggiornati i campi earth-day, earth-month, earth-year.
 
 \section{Immagini Persistenti}
@@ -239,20 +239,20 @@ Per completare la configurazione dello store persistente si deve ``avvolgere" il
     \label{fig:usoStorePersistente}
 \end{figure}
 
-\section{Ripristinare le immagini occultate}
+\section{Ripristinare le Immagini Occultate}
 Una volta occultate, le immagini non vengono pi\`u visualizzate a meno che non sia l'utente a deciderlo. \`E stato realizzato un pulsante, chiamato ``Photos", che permette di ripristinare le immagini nascoste.
 
 Nella schermata principale si hanno diversi pulsanti con uno stile simile, tra cui ``Photos": ho deciso quindi di realizzare un ``Custom component" in modo da poterlo riutilizzare per tutti i pulsanti.
 Come si pu\`o osservare nella Fig 3.14, a FilterButtonComponent {}(il ``Custom component") vengono passate cinque prop: tre per configurarne lo stile e due per configurarne il funzionamento.
 
-Ogni volta che il pulsante Photos viene premuto, il suo colore cambia da azzurro a grigio e viceversa: questo avviene grazie alla prop ``setColor". 
+Ogni volta che il pulsante Photos viene premuto, il suo colore cambia da azzurro a grigio e viceversa: questo avviene grazie alla prop ``setColor".
 Il cambio di colore indica una precisa azione del filtro:
 \begin{itemize}
-    \item Blu: vengono visualizzate anche le immagini nascoste. L'array ``images" contiene sia le foto da visualizzare che quelle nascoste, e vengono visualizzate solo quelle che possiedono la propriet\`a ``hide"= false; affinch\`e tutte le immagini vengano mostrate si deve settare la propriet\`a ``hide" 
+    \item Blu: vengono visualizzate anche le immagini nascoste. L'array ``images" contiene sia le foto da visualizzare che quelle nascoste, e vengono visualizzate solo quelle che possiedono la propriet\`a ``hide"= false; affinch\`e tutte le immagini vengano mostrate si deve settare la propriet\`a ``hide"
           di ogni oggetto all'interno dell'array al valore ``false". Per poter aggiornare la FlatList \`e richiesto l'aggiornamento dello stato ``images" all'interno dello store.
     \item Grigio: vengono visualizzate solo le immagini che non sono state nascoste in precedenza.
-        Per ritornare alla condizione in cui solo le immagini non occultate vengono visualizzate, viene invocata la funzione dontShowImagesHide(); questa va a ripristinare l'array ``images", andando a settare correttamente la propriet\`a ``hide" di ogni oggetto all'interno di esso.
-        Per poter aggiornare la FlatList \`e richiesto l'aggiornamento dello stato ``images" all'interno dello store.
+          Per ritornare alla condizione in cui solo le immagini non occultate vengono visualizzate, viene invocata la funzione dontShowImagesHide(); questa va a ripristinare l'array ``images", andando a settare correttamente la propriet\`a ``hide" di ogni oggetto all'interno di esso.
+          Per poter aggiornare la FlatList \`e richiesto l'aggiornamento dello stato ``images" all'interno dello store.
 \end{itemize}
 
 \begin{figure}[h]
@@ -264,7 +264,7 @@ Il cambio di colore indica una precisa azione del filtro:
 \section{Procedura di Sign In e Sign Up}
 Ogni utente prima di poter accedere all'applicazione deve disporre di un JWT (JSON Web Token); per poterlo ottenere \`e necessario fornire
 e-mail e password nella schermata di login o di registrazione, a seconda che le credenziali siano gi\`a registrate nel database o meno.
-Sia la procedura di \textit{sign in}  che quella di \textit{sign up} richiedono che venga contattato il server locale. In particolare, nella prima procedura viene 
+Sia la procedura di \textit{sign in}  che quella di \textit{sign up} richiedono che venga contattato il server locale. In particolare, nella prima procedura viene
 contattata la route localhost3000/signin, mentre nella seconda viene contattata la route localhost3000/signup.
 \begin{figure}[h]
     \centering
@@ -310,7 +310,7 @@ della password. Quest'ultima viene poi sostituita a quella inserita dall'utente 
 \subsection*{Sign In}
 
 \begin{figure}[H]
-   \centering
+    \centering
     \includegraphics[width=9cm, height=6cm]{images/signinServer.png}
     \caption[differenzeiteot]{Route di sign in}
     \label{fig:Route sign in}
@@ -318,4 +318,4 @@ della password. Quest'ultima viene poi sostituita a quella inserita dall'utente 
 
 Come si pu\`o vedere nella Fig 3.18, per prima cosa si accede alle credenziali inviate dall'utente e si controlla che siano state fornite sia un'email che una password. In seguito, attraverso l'email fornita, viene recuperata la password cifrata presente
 nel database e tramite la funzione comparePassword() si confrontano le due password. Questa funzione fa uso dl metodo compare del modulo bcrypt per andare a verificare che la password fornita dall'utente e quella cifrata presente sul database siano uguali.
- Se la verifica da esito positivo, viene generato un JWT tramite il metodo sign del modulo ``jsonwebtoken". il token generato viene poi inserito nel body della riposta per l'utente.
+Se la verifica da esito positivo, viene generato un JWT tramite il metodo sign del modulo ``jsonwebtoken". il token generato viene poi inserito nel body della riposta per l'utente.

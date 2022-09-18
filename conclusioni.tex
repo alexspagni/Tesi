@@ -3,7 +3,7 @@
 \addcontentsline{toc}{chapter}{Conclusioni} % this line enable the introduction to be listed in the Table Of Contents even if it's not a numbered chapter (see above)
 \markboth{}{}
 
-In questo capitolo verranno discussi gli obiettivi, i risultati e le conoscenze acquisite al termine del tirocinio ed eventuali sviluppi futuri dell'applicazione.
+In questo capitolo vengono discussi gli obiettivi, i risultati e le conoscenze acquisite al termine del tirocinio ed eventuali sviluppi futuri dell'applicazione.
 
 \section{Obiettivi e Risultati Raggiunti}
 Gli obiettivi principali di questo progetto di tirocinio sono stati:
@@ -16,23 +16,23 @@ Gli obiettivi principali di questo progetto di tirocinio sono stati:
 \end{enumerate}
 
 Tutti questi obiettivi non solo sono stati raggiunti con successo, ma \`e stato aggiunto anche uno strato di autenticazione e registrazione che non era richiesto dal progetto.
-Come si pu\`o dedurre dal capitolo ``RISULTATI", il primo obiettivo \`e stato raggiunto in pieno: l'applicazione svolge le stesse funzioni sia su Android che iOS. Nonostante ci\`o, essendo stato
-utilizzato lo stesso codice per entrambe le piattaforme, vi saranno sempre delle differenze per quanto riguarda gli aspetti grafici. L'applicazione non presenta
+Come si pu\`o dedurre dal Capitolo 4, il primo obiettivo \`e stato raggiunto in pieno: l'applicazione svolge le stesse funzioni sia su Android che iOS. Nonostante ci\`o, essendo stato
+utilizzato lo stesso codice per entrambe le piattaforme, vi saranno sempre delle differenze per quanto riguarda l'aspetto grafico. L'applicazione non presenta
 cali di performance, il che dimostra che lo sviluppo di applicazioni multipiattaforma \`e una valida alternativa allo sviluppo nativo.
 Si sottolinea che questo applicativo non fa uso di funzioni native del dispositivo come GPS e notifiche Push.
 
-Sia il secondo che il terzo obiettivo sono stati raggiunti con successo: dal capitolo ``IMPLEMENTAZIONE" si pu\`o infatti osservare che ad ogni ricerca vengono caricate delle nuove immagini, e questo \`e il risultato
+Sia il secondo che il terzo obiettivo sono stati raggiunti con successo: dal Capitolo 3 si pu\`o infatti osservare che ad ogni ricerca vengono caricate delle nuove immagini, e questo \`e il risultato
 di diverse richieste HTTP. Inoltre l'uso del formato JSON per la trasmissione dei dati \`e stato cruciale: in effetti le immagini restituite dai server della Nasa sono proprio in questo formato. Tramite JSON \`e stato possibile comunicare facilmente al server locale
 le credenziali inserite da ogni utente e in seguito estrarre il JWT dalle risposte ottenute.
 
-Durante l'utilizzo dell'applicazione, la navigazione tra i vari screen che la compongono risulta essere fluida e garantisce una buona UX. Nonostante ci\`o,
-essendo l'applicazione multipiattaforma, la navigazione pu\`o essere diversa tra i vari sistemi operativi a causa delle funzioni navigazione nativa di ogni dispositivo.
+Durante l'utilizzo dell'applicazione, la navigazione tra i vari screen che la compongono risulta essere fluida e garantisce una buona User Experience. Nonostante ci\`o,
+essendo l'applicazione multipiattaforma, la navigazione pu\`o essere diversa tra i vari sistemi operativi a causa delle funzioni di navigazione native di ogni dispositivo.
 
 Oltre a poter testare l'applicazione in locale ne \`e stata fatta anche la build in modo da poterla distribuire sugli store in un futuro, a seguito di ulteriori migliorie.
 La build \`e stata caricata sul sito di Expo ed \`e possibile scaricarne l'apk.
 
 \section{Conoscenze Acquisite}
-Terminato il progetto si pu\`o dire di aver approfondito ed acqusisto competenze con nuovi strumenti e tecnologie, in particolare:
+Terminato il progetto si pu\`o dire di aver approfondito ed acquisisto competenze con nuovi strumenti e tecnologie, in particolare:
 \begin{itemize}
     \item JavaScript: l'utilizzo di JavaScript al di fuori dello sviluppo web \`e stato particolarme utile per capire come utilizzare questo linguaggio sia per lo sviluppo
           lato server, tramite Node.js, sia per lo sviluppo dell'intera applicazione tramite l'utilizzo del framework React Native.
@@ -51,5 +51,5 @@ Nonostante l'applicazione soddisfi tutti i requisiti di progetto, si potrebbe pe
 \end{itemize}
 Un altro possibile miglioramento potrebbe consistere nel memorizzare le ultime immagini visualizzate dall'utente sul database, piuttosto che mantenerle in modo persistente sul dispositivo: in questo
 modo si risparmierebbe memoria.
-Per garantire una migliore UX si potrebbe creare una classifica delle immagini pi\`u visualizzate: in questo modo ogni utente potrebbe dare la propria opinione sulle diverse immagini. In base a questa
+Per garantire una migliore User Experience si potrebbe creare una classifica delle immagini pi\`u visualizzate: in questo modo ogni utente potrebbe dare la propria opinione sulle diverse immagini. In base a questa
 classifica si potrebbe decidere di non mostrare le immagini meno popolari.

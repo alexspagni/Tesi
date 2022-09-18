@@ -8,7 +8,6 @@ Tra una ricerca e l'altra verr\`a mostrata una schermata di ``loading" in modo d
 
 Oltre a poter ricercare le immagini secondo diversi parametri, l'applicazione deve anche fornire la possibilit\`a di nascondere alcune di queste in modo che non vengano visualizzate dall'utente in una ricerca futura.
 Nonostante le immagini nascoste non vengano presentate all'utente quando effettua una ricerca, gli verr\`a sempre concessa la possibilit\`a di ripristinarle.
-
 L'utente potrebbe non essere interessato ad un'intera categoria di immagini, quindi gli verr\`a fornita la possibilit\`a di nascondere tutte le foto relative ad una sua ricerca.
 
 Ogni volta che verr\`a chiusa l'applicazione, le ultime immagini visualizzate dovranno essere memorizzata in modo persistente cos\`i che possano essere mostrate all'ultilizzatore quando riaprir\`a l'app.
@@ -40,7 +39,7 @@ In Fig 2.1 si pu\`o osservare una rappresentazione grafica dell'interazione tra 
     \caption[differenzeiteot]{Comuncazone tra i vari sistemi costituenti l'applicazione}
     \label{fig:modellodicomunicazione}
 \end{figure}
-\subsection{Requisiti funzionali}
+\subsection{Requisiti Funzionali}
 
 Ad ogni requisito viene associato un nome mnemonico, una breve descrizione e un codice di priorit\`a in modo tale da indicare quali requisiti devono essere implementati per primi e quindi definire una gerarchia di implementazione.
 \begin{center}
@@ -58,7 +57,7 @@ Ad ogni requisito viene associato un nome mnemonico, una breve descrizione e un 
         Privacy and Policy & L'utente deve poter conoscere quali condizioni e termini ha accettato scaricando l'applicazione                           & Secondario          \\ \hline
     \end{longtable}
 \end{center}
-\subsection{Requisiti non funzionali}
+\subsection{Requisiti non Funzionali}
 In questa sezione vengono descritti i principali requisiti non funzionali necessari per il buon funzionamento dell'applicazione.
 \begin{center}
     \begin{longtable}{ | l | p{7cm} | }
@@ -73,13 +72,13 @@ In questa sezione vengono descritti i principali requisiti non funzionali necess
 \section{Casi d'Uso}
 
 In questa sezione vengono illustrati i pricipali casi d'uso.%In ognuno di essi gli attori\footnote{L'attore \`e qualsiasi entit\`a che svolge un ruolo in un dato sistema. Questo potrebbe essere una persona, un'organizzazione o un sistema esterno. } sono gli end users e il server locale.
-\subsection*{Caso d'uso U1: Sign in}
+\subsection*{Caso d'Uso U1: Sign In}
 \begin{itemize}
     \item  \textbf{Use case overview:} l'applicazione deve consentire agli utenti la possibilit\`a di poter accedere al proprio account.
     \item \textbf{Actors:} end user, server locale.
     \item \textbf{Triggers:} si preme sul pulsante ``Sign in".
     \item \textbf{Pre-Condition:} l'utente non deve aver gi\`a effettuato l'accesso all'applicazione oppure si deve trovare nell'Index Screen dove pu\`o effettuare il logout.
-    \item \textbf{Post-condition:} si verr\`a indirizzati nell'Index Screen dell'applicazione.
+    \item \textbf{Post-condition:} si viene indirizzati nell'Index Screen dell'applicazione.
     \item \textbf{Main Flow:} \begin{enumerate}
               \item L'utente ha appena terminato di scaricare l'applicazione e la apre, ritrovandosi come prima schermata lo ``Splash screen". Una volta premuto il pulsante ``Explore" viene reindirizzato sullo screen destinato al log in.
               \item Arrivato allo screen di log in l'utente inserisce la propria e-mail e password e preme sul pulsante ``Sign in".
@@ -96,13 +95,13 @@ In questa sezione vengono illustrati i pricipali casi d'uso.%In ognuno di essi g
               \item Una volta inserite le proprie credenziali viene inviata una richiesta al server locale che va a confrontare queste ultime con quelle presenti sul database.
               \item Le credenziali inserite dall'utente non sono corrette e gli viene presentato un messaggio di errore. \end{enumerate}
 \end{itemize}
-\subsection*{Caso d'uso U2: Sign up}
+\subsection*{Caso d'Uso U2: Sign Up}
 \begin{itemize}
     \item  \textbf{Use case overview:} l'applicazione deve consentire agli utenti la possibilit\`a di potersi registrare tramite la propria e-mail e password.
     \item \textbf{Actors:} end user, server locale.
     \item \textbf{Triggers:} si preme sul pulsante ``Sign up".
     \item \textbf{Pre-Condition:} l'utente non deve aver gi\`a effettuato l'accesso all'applicazione.
-    \item \textbf{Post-condition:}si viene indirizzati nell'Index Screen dell'applicazione.
+    \item \textbf{Post-condition:} si viene indirizzati nell'Index Screen dell'applicazione.
     \item \textbf{Main Flow:} \begin{enumerate}
               \item L'utente ha appena terminato di scaricare l'applicazione e la apre, ritrovandosi come prima schermata lo ``Splash screen". Una volta premuto il pulsante "Explore" viene reindirizzato sullo screen destinato al log in. Non avendo alcune credenziale valida l'utente deve premere sul pulsante "Sign up" in modo da essere reindirizzato nello schermo dedicato alla registrazione.
               \item Arrivato allo screen di registrazione l'utente inserisce la propria e-mail e password e preme sul pulsante ``Sign up".
@@ -111,10 +110,10 @@ In questa sezione vengono illustrati i pricipali casi d'uso.%In ognuno di essi g
           \end{enumerate}
 
     \item \textbf{Exception Flow:}\begin{enumerate}
-              \item Una volta inserite le proprie credenziali verr\`a inviata una richiesta al server locale che andr\`a a confrontare che l'e-mail inserita dall'utente non sia gi\`a presente nel database.
+              \item Una volta inserite le proprie credenziali viene inviata una richiesta al server locale che va a confrontare che l'e-mail inserita dall'utente non sia gi\`a presente nel database.
               \item Esiste gi\`a un utente registrato con quella e-mail, quindi il sistema restituisce un messaggio di errore. \end{enumerate}
 \end{itemize}
-\subsection*{Caso d'uso U3: Ricerca immagini tramite nome Rover}
+\subsection*{Caso d'Uso U3: Ricerca Immagini tramite Nome Rover}
 \begin{itemize}
     \item  \textbf{Use case overview:} l'applicazione deve consentire agli utenti di ricercare le immagini in base al nome del Rover.
     \item \textbf{Actors:} End user, server Nasa.
@@ -128,13 +127,13 @@ In questa sezione vengono illustrati i pricipali casi d'uso.%In ognuno di essi g
 
           \end{enumerate}
     \item \textbf{Alternative Flow:}\begin{enumerate}
-              \item L'utente si trova nella schermata principale e digita il nome del Rover che ha scattato le immagini le immagini richieste. Per avviare la ricerca si dovr\`e premere sul pulsante ``All".
+              \item L'utente si trova nella schermata principale e digita il nome del Rover che ha scattato le immagini le immagini richieste. Per avviare la ricerca si deve premere sul pulsante ``All".
               \item Viene effettuata una richiesta HTTP verso i server della Nasa i quali rispondono con un oggetto JSON che contiene tutte le foto che sono state trovate.
               \item Il nome del Rover inserito non \`e corretto. L'utente viene informato che non \`e stata trovata alcuna foto e gli viene presentata una lista di immagini vuota.
 
           \end{enumerate}
 \end{itemize}
-\subsection*{Caso d'uso U4: Ricerca immagini per data solare}
+\subsection*{Caso d'Uso U4: Ricerca Immagini per Data Solare}
 \begin{itemize}
     \item  \textbf{Use case overview:} l'applicazione deve consentire agli utenti la possibilit\`a di ricercare le immagini in base a una certa data solare.
     \item \textbf{Actors:} end user, server Nasa.
@@ -155,7 +154,7 @@ In questa sezione vengono illustrati i pricipali casi d'uso.%In ognuno di essi g
           \end{enumerate}
 \end{itemize}
 
-\subsection*{Caso d'uso U5: Nascondere un immagine}
+\subsection*{Caso d'Uso U5: Nascondere un'Immagine}
 \begin{itemize}
     \item  \textbf{Use case overview:} l'applicazione deve consentire agli utenti la possibilit\`a di nascondere le immagini mostrate in modo che non vengano visualizzate in futuro.
     \item \textbf{Actors:} end user.
@@ -174,7 +173,7 @@ In questa sezione vengono illustrati i pricipali casi d'uso.%In ognuno di essi g
           \end{enumerate}
 \end{itemize}
 
-\subsection*{Caso d'uso U6: Ripristinare le immagini nascoste precedentemente}
+\subsection*{Caso d'Uso U6: Ripristinare le Immagini Nascoste Precedentemente}
 \begin{itemize}
     \item  \textbf{Use case overview:} l'applicazione deve consentire agli utenti la possibilit\`a di vedere anche le immagini nascoste in precedenza.
     \item \textbf{Actors:} end user.
